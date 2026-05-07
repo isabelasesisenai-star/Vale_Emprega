@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Cadastrar Currículo</title>
+    <link rel="stylesheet" href="cadastrocurriculo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            
+            <ul class="menu">
+                <li><a href="homecandidato.html">Início</a></li>
+                <li><a href="vagascandidato.html">Vagas</a></li>
+                <li><a href="cadastrocurriculo.html" class="ativo">Cadastrar currículo</a></li>
+            </ul>
+
+            <div class="area-usuario">
+                <a href="#" class="nome-usuario" id="btnUsuario">
+                    <i class="fas fa-user-circle"></i> Nome do Candidato <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobrecandidato.html"><i class="fas fa-info-circle"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatocandidato.html"><i class="fas fa-question-circle"></i> Contato</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    <li><a href="perfilusuario.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <section class="secaocadastro">
+        <div class="container">
+            <h1>Cadastre seu Currículo</h1>
+            <p>Preencha suas informações e aumente suas chances de conseguir uma vaga!</p>
+
+            <div class="conteudocadastro">
+                <div class="formulario">
+                    <div class="grupo-campos">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Nome">
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="grupo-campos linha">
+                        <div>
+                            <label>Telefone</label>
+                            <input type="text" placeholder="Telefone">
+                        </div>
+                        <div>
+                            <label>Cidade/Estado</label>
+                            <div class="select-duplo">
+                                <select>
+                                    <option value="">Selecione</option>
+                                    <option>São Paulo</option>
+                                    <option>Rio de Janeiro</option>
+                                    <option>Belo Horizonte</option>
+                                    <option>Brasília</option>
+                                    <option>Salvador</option>
+                                    <option>Fortaleza</option>
+                                    <option>Recife</option>
+                                    <option>Porto Alegre</option>
+                                    <option>Curitiba</option>
+                                    <option>Manaus</option>
+                                </select>
+                                <select>
+                                    <option value="">Selecione</option>
+                                    <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                                    <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                                    <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                                    <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                                    <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                                    <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                                    <option>SP</option><option>SE</option><option>TO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Objetivo Profissional</label>
+                        <select>
+                            <option value="">Selecione</option>
+                            <option>Estágio em TI</option>
+                            <option>Jovem Aprendiz</option>
+                            <option>Auxiliar Administrativo</option>
+                            <option>Atendente</option>
+                            <option>Vendedor</option>
+                            <option>Operador de Caixa</option>
+                            <option>Repositor</option>
+                            <option>Entregador</option>
+                            <option>Auxiliar de Produção</option>
+                            <option>Logística</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Habilidades</label>
+                        <div class="tags">
+                            <span class="tag">Ex: Comunicação <i class="fas fa-times"></i></span>
+                            <input type="text" placeholder="+ Digite uma habilidade">
+                        </div>
+                    </div>
+
+                    <div class="barra-progresso">
+                        <span>60% preenchido</span>
+                        <div class="barra">
+                            <div class="progresso" style="width: 60%"></div>
+                        </div>
+                    </div>
+
+                    <button class="btncadastrar">Cadastrar Currículo</button>
+                </div>
+
+                <div class="lado-direito">
+                    <div class="opcoes-envio">
+                        <label>
+                            <input type="radio" name="envio" checked>
+                            Preencher manualmente
+                        </label>
+                        <label>
+                            <input type="radio" name="envio">
+                            Enviar currículo (PDF / DOC)
+                        </label>
+                    </div>
+
+                    <div class="upload-arquivo">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Arraste ou Selecione um arquivo DOC ou PDF</p>
+                        <button class="btnselecionar">Selecionar arquivo</button>
+                        <div class="arquivo-enviado">
+                            <span>curriculo_maria_joao.pdf</span>
+                            <small>✓ Arquivo enviado com sucesso!</small>
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Formação</label>
+                        <input type="text" placeholder="Escola/Curso">
+                        <div class="select-duplo">
+                            <select>
+                                <option value="">Selecione o nível</option>
+                                <option>Fundamental Incompleto</option>
+                                <option>Fundamental Completo</option>
+                                <option>Ensino Médio Incompleto</option>
+                                <option>Ensino Médio Completo</option>
+                                <option>Técnico</option>
+                                <option>Superior Incompleto</option>
+                                <option>Superior Completo</option>
+                            </select>
+                            <select>
+                                <option value="">Situação</option>
+                                <option>Cursando</option>
+                                <option>Completo</option>
+                                <option>Incompleto</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Adicionar outra formação..." class="input-adicionar">
+                        <a href="#" class="link-adicionar">+ Adicionar formação</a>
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Experiência (opcional)</label>
+                        <input type="text" placeholder="Empresa">
+                        <input type="text" placeholder="Cargo">
+                        <input type="text" placeholder="Adicionar outra experiência..." class="input-adicionar">
+                        <a href="#" class="link-adicionar">+ Adicionar experiência</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnUsuario = document.getElementById('btnUsuario');
+        const submenu = document.getElementById('submenuUsuario');
+
+        btnUsuario.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if(!btnUsuario.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

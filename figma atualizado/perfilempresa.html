@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Meu Perfil</title>
+    <link rel="stylesheet" href="perfilempresa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR DA EMPRESA -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            
+            <ul class="menu">
+                <li><a href="homeempresa.html">Início</a></li>
+                <li><a href="vagasempresa.html">Candidatos</a></li>
+                <li><a href="cadastrovagas.html">Cadastrar vaga</a></li>
+            </ul>
+
+            <div class="area-usuario">
+                <a href="#" class="nome-usuario" id="btnUsuario">
+                    <i class="fas fa-building"></i> Nome da Empresa <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobreplataforma.html"><i class="fas fa-info-circle"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatoempresa.html"><i class="fas fa-question-circle"></i> Contato</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    <li><a href="perfilempresa.html" class="ativo"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <section class="secaoperfil">
+        <div class="container">
+            <div class="conteudoperfil">
+                <!-- FORMULÁRIO ESQUERDA -->
+                <div class="formulario-perfil">
+                    <div class="grupo-campos">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Nome">
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Telefone</label>
+                        <input type="text" placeholder="Telefone">
+                    </div>
+
+                    <div class="grupo-campos">
+                        <label>Selecione seu estado</label>
+                        <select>
+                            <option value="">Selecione</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Belo Horizonte</option>
+                            <option>Brasília</option>
+                            <option>Salvador</option>
+                            <option>Fortaleza</option>
+                            <option>Recife</option>
+                            <option>Porto Alegre</option>
+                            <option>Curitiba</option>
+                            <option>Manaus</option>
+                        </select>
+                    </div>
+
+                    <div class="botoes">
+                        <button class="btnvoltar">Voltar</button>
+                        <button class="btnsalvar">Salvar Alterações</button>
+                    </div>
+                </div>
+
+                <!-- ÁREA FOTO DIREITA -->
+                <div class="area-foto">
+                    <div class="circulo-foto">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <button class="btneditarfoto">Editar Foto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnUsuario = document.getElementById('btnUsuario');
+        const submenu = document.getElementById('submenuUsuario');
+
+        btnUsuario.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if(!btnUsuario.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

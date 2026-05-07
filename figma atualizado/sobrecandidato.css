@@ -1,0 +1,267 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    min-width: 1200px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== CORES ===== */
+:root {
+    --laranja: #F04C24;
+    --azul: #3F77A7;
+    --branco: #FFFFFF;
+    --cinza: #F5F5F5;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btnbranco {
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid var(--azul);
+}
+
+.btnlaranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.btnazul {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 80px;
+    background-color: var(--branco);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.menu a {
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.menu a.ativo {
+    color: var(--laranja);
+}
+
+/* ÁREA DO USUÁRIO */
+.area-usuario {
+    position: relative;
+}
+
+.nome-usuario {
+    color: var(--laranja) !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nome-usuario i {
+    font-size: 18px;
+    color: var(--laranja);
+}
+
+/* SUBMENU - FUNDO LARANJA CHEIO */
+.submenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--laranja);
+    list-style: none;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 8px;
+    display: none;
+    overflow: hidden;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu li a {
+    color: var(--branco) !important;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.submenu li a:hover,
+.submenu li a.ativo {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.submenu li a i {
+    font-size: 16px;
+    color: var(--branco);
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+.secaosobre {
+    padding: 60px 0;
+}
+
+.conteudosobre {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.textosobre h2 {
+    font-size: 32px;
+    color: var(--laranja);
+    margin-bottom: 16px;
+}
+
+.textosobre > p {
+    font-size: 16px;
+    margin-bottom: 32px;
+    max-width: 500px;
+    color: #666;
+}
+
+/* TÍTULO "COMO PODEMOS TE AJUDAR?" EM LARANJA */
+.textosobre h3 {
+    font-size: 28px;
+color: #F04C24;   
+    margin-bottom: 24px;
+}
+
+.bloco {
+    margin-bottom: 24px;
+}
+
+/* TÍTULOS CANDIDATO E EMPRESA EM LARANJA */
+.bloco h4 {
+    font-size: 20px;
+    color: #000000;;
+    margin-bottom: 15px;
+}
+
+.bloco ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bloco li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bloco li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--laranja);
+    border-radius: 50%;
+}
+
+.observacao {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #666;
+}
+
+.imagemlado img {
+    max-width: 500px;
+    height: auto;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    height: 120px;
+    background-color: var(--cinza);
+    margin-top: 60px;
+    border-radius: 0;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudofooter {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logofooter {
+    height: 40px;
+    width: auto;
+}
+
+.conteudofooter p {
+    font-size: 14px;
+}
+
+.linkprivacidade {
+    color: var(--azul);
+    font-size: 14px;
+}

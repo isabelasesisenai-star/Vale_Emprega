@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Página Inicial</title>
+    <link rel="stylesheet" href="homeempresa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            <ul class="menu">
+                <li><a href="homeempresa.html" class="ativo">Início</a></li>
+                <li><a href="buscarprofissionais.html">Candidato</a></li>
+                <li><a href="cadastrovagas.html">Cadastrar vaga</a></li>
+            </ul>
+            <div class="area-usuario">
+                <a href="#" class="nome-usuario" id="btnUsuario">
+                    <i class="fas fa-building"></i> Nome da Empresa <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobreempresa.html"><i class="fas fa-info"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatoempresa.html"><i class="fas fa-question"></i> Contato</a></li>
+                    <li><a href="index.html"><i class="fas fa-times"></i> Sair</a></li>
+                    <li><a href="perfilempresa.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="textobanner">
+                <h1>Seu primeiro passo para o mundo profissional começa aqui!</h1>
+                <p>Encontre estágios, vagas de menor aprendiz ou emprego dos sonhos!<br>Ou então cadastre sua empresa e encontre candidatos em potencial.</p>
+            </div>
+            <div class="imagembanner">
+                <img src="img/mulher.png" alt="Ilustração de pessoas trabalhando">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Principais -->
+    <section class="cardsprincipais">
+        <div class="container">
+            <div class="card cardcandidato">
+                <h3>Sou candidato</h3>
+                <p>Encontre a sua primeira oportunidade</p>
+                <p>Cadastre-se e visualize milhões de vagas e seja encontrado por empresas.</p>
+                <a href="cadastrocandidato.html" class="btn btnlaranja">Cadastrar-se</a>
+            </div>
+
+            <div class="card cardempresa">
+                <h3>Sou empresa</h3>
+                <p>Encontre talentos para sua empresa</p>
+                <p>Cadastre sua empresa e tenha acesso a candidatos qualificados.</p>
+                <a href="cadastroempresa.html" class="btn btnazul">Cadastre sua empresa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnUsuario = document.getElementById('btnUsuario');
+        const submenu = document.getElementById('submenuUsuario');
+
+        btnUsuario.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if(!btnUsuario.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

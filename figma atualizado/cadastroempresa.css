@@ -1,0 +1,222 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background: url('img/fundo-empresa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== CORES ===== */
+:root {
+    --laranja: #F04C24;
+    --azul: #3F77A7;
+    --branco: #FFFFFF;
+    --cinza-claro: #f0f0f0;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btnbranco {
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid #ccc;
+}
+
+.btnlaranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 80px;
+    background-color: var(--branco);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.menu a {
+    color: #333333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.botoesnavbar {
+    display: flex;
+    gap: 10px;
+}
+
+.botoesnavbar .ativo {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+/* ===== SEÇÃO CADASTRO EMPRESA ===== */
+.secaocadastroempresa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.formulariocadastroempresa {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 380px;
+    text-align: left;
+}
+
+.cabecalhoform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cabecalhoform i {
+    color: var(--laranja);
+    font-size: 18px;
+}
+
+.cabecalhoform h2 {
+    font-size: 20px;
+    color: var(--laranja);
+    margin: 0;
+}
+
+.campo-input {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.campo-input i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.opcoes-check {
+    margin: 20px 0;
+}
+
+.item-check {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.item-check input {
+    margin-right: 8px;
+}
+
+.item-check.termo {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.btn-registrar {
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    height: 100px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudofooter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.logofooter {
+    height: 35px;
+    width: auto;
+}
+
+.linkprivacidade {
+    color: var(--azul);
+    font-size: 13px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Vagas</title>
+    <link rel="stylesheet" href="vagascandidatos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            <ul class="menu">
+                <li><a href="homecandidato.html">Início</a></li>
+                <li><a href="vagascandidato.html" class="ativo">Vagas</a></li>
+                <li><a href="cadastrocurriculo.html">Cadastrar currículo</a></li>
+            </ul>
+            <div class="usuario dropdown">
+                <a href="#" id="usuarioBtn">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Nome do Candidato</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobrecandidato.html"><i class="fas fa-info-circle"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatocandidato.html"><i class="fas fa-question-circle"></i> Contato</a></li>
+                    <li><a href="logincandidato.html"><i class="fas fa-times-circle"></i> Sair</a></li>
+                    <li><a href="perfilusuario.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Vagas -->
+    <section class="secaovagas">
+        <div class="container">
+            <div class="buscavagas">
+                <input type="text" placeholder="Cargos de menor aprendiz em Caçapava..." class="campobusca">
+                <button class="btnbuscar">🔍</button>
+            </div>
+
+            <h2>As melhores empresas contratam aqui!</h2>
+
+            <div class="logosempresas">
+                <div class="logoempresa shibata">
+                    <img src="img/shibata.png" alt="Shibata">
+                </div>
+                <div class="logoempresa nestle">
+                    <img src="img/nestle.png" alt="Nestlé">
+                </div>
+                <div class="logoempresa magalu">
+                    <img src="img/magalu.jpg" alt="Magalu">
+                </div>
+            </div>
+
+            <a href="#" class="btn btnlaranja btnverempresas">Confira todas as empresas contratando</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para abrir/fechar no clique -->
+    <script>
+        const usuarioBtn = document.getElementById('usuarioBtn');
+        const submenu = document.getElementById('submenuUsuario');
+
+        usuarioBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        // Fecha o menu se clicar fora
+        document.addEventListener('click', function(e) {
+            if (!usuarioBtn.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

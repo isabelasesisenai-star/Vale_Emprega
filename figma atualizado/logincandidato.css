@@ -1,0 +1,260 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background: linear-gradient(to bottom, #fff5f0, #ffffff);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== CORES ===== */
+:root {
+    --laranja: #F04C24;
+    --azul: #3F77A7;
+    --branco: #FFFFFF;
+    --cinza-claro: #f0f0f0;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btnbranco {
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid #ccc;
+}
+
+.btnlaranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 80px;
+    background-color: var(--branco);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.menu a {
+    color: #333333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.botoesnavbar {
+    display: flex;
+    gap: 10px;
+}
+
+.botoesnavbar .ativo {
+    border-color: var(--laranja);
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+/* ===== SEÇÃO LOGIN ===== */
+.secaologin {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.formulariologin {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 380px;
+    text-align: center;
+}
+
+.cabecalhoform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cabecalhoform i {
+    color: var(--laranja);
+    font-size: 18px;
+}
+
+.cabecalhoform h2 {
+    font-size: 20px;
+    color: var(--laranja);
+    margin: 0;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 24px auto;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar i {
+    color: #999;
+    font-size: 32px;
+}
+
+.campo-input {
+    position: relative;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.campo-input i:not(.fa-eye):not(.fa-eye-slash) {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.campo-input i.fa-eye,
+.campo-input i.fa-eye-slash {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.link-esqueci {
+    color: var(--azul);
+    font-size: 13px;
+}
+
+.btn-entrar {
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.link-registro {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.link-registro a {
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    height: 100px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudofooter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.logofooter {
+    height: 35px;
+    width: auto;
+}
+
+.linkprivacidade {
+    color: var(--azul);
+    font-size: 13px;
+}

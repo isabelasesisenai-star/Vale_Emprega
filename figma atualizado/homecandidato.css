@@ -1,0 +1,283 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== CORES - LARANJA CORRETO ===== */
+:root {
+    --laranja: #F04C24;
+    --azul: #0066B3;
+    --branco: #FFFFFF;
+    --cinza-claro: #f8f8f8;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnlaranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.btnazul {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 80px;
+    background-color: var(--branco);
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* MENU CENTRALIZADO */
+.menu-centralizado {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-centralizado a {
+    color: #333333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu-centralizado a.ativo {
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+/* ITEM USUÁRIO */
+.item-usuario {
+    position: relative;
+    list-style: none;
+}
+
+.nome-usuario {
+    color: var(--laranja) !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nome-usuario i {
+    font-size: 18px;
+    color: var(--laranja);
+}
+
+/* SUBMENU - FUNDO LARANJA, NO CLIQUE */
+.submenu {
+    position: absolute;
+    top: 100%;
+    right: -10px; /* COLADO BEM NO CANTO */
+    left: auto;
+    background-color: var(--laranja);
+    list-style: none;
+    min-width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 8px;
+    display: none; /* ESCONDIDO POR PADRÃO */
+    overflow: hidden;
+}
+
+/* CLASSE PARA MOSTRAR QUANDO CLICAR */
+.submenu.show {
+    display: block;
+}
+
+.submenu li a {
+    color: var(--branco) !important;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.submenu li a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.submenu li a i {
+    font-size: 16px;
+    color: var(--branco);
+}
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+.secaoprincipal {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.conteudo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.texto-principal h1 {
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.texto-principal h1 span {
+    color: var(--laranja);
+}
+
+.texto-principal p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.imagem-principal img {
+    width: 400px;
+    height: auto;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 24px;
+    border-radius: 8px;
+    width: 380px;
+    text-align: left;
+}
+
+.icone-card {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.card-candidato .icone-card {
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+.card-empresa .icone-card {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.card small {
+    display: block;
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 16px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    height: 100px;
+    background-color: var(--cinza-claro);
+    border-top: 1px solid #eeeeee;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudofooter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.logofooter {
+    height: 35px;
+    width: auto;
+}
+
+.linkprivacidade {
+    color: var(--azul);
+    font-size: 13px;
+}

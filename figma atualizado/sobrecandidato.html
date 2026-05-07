@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Sobre a Plataforma</title>
+    <link rel="stylesheet" href="sobrecandidato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            
+            <!-- MENU PRINCIPAL -->
+            <ul class="menu">
+                <li><a href="homecandidato.html">Início</a></li>
+                <li><a href="vagascandidato.html">Vagas</a></li>
+                <li><a href="cadastrocurriculo.html">Cadastrar currículo</a></li>
+            </ul>
+
+            <!-- ÁREA DO USUÁRIO -->
+            <div class="area-usuario">
+                <a href="#" class="nome-usuario" id="btnUsuario">
+                    <i class="fas fa-user-circle"></i> Nome do Candidato <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobrecandidato.html" class="ativo"><i class="fas fa-info-circle"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatocandidato.html"><i class="fas fa-question-circle"></i> Contato</a></li>
+                    <li><a href="logincandidato.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    <li><a href="perfilusuario.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO SOBRE -->
+    <section class="secaosobre">
+        <div class="container">
+            <div class="conteudosobre">
+                <div class="textosobre">
+                    <h2>Sobre nós</h2>
+                    <p>Conectamos jovens em início de carreira a empresas que estão em busca de novos talentos.</p>
+
+                    <h3>Como podemos te ajudar?</h3>
+
+                    <div class="bloco">
+                        <h4>Candidato</h4>
+                        <ul>
+                            <li>Descobrir suas habilidades;</li>
+                            <li>Montar um currículo;</li>
+                            <li>Encontrar e se candidatar a vagas;</li>
+                            <li>Se preparar para entrevistas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bloco">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li>Divulgar vagas;</li>
+                            <li>Procurar por candidatos qualificados.</li>
+                        </ul>
+                    </div>
+
+                    <p class="observacao">Tudo de forma objetiva, prática e fácil de entender.</p>
+                </div>
+
+                <div class="imagemlado">
+                    <img src="img/sobre.png" alt="Ilustração sobre nós">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnUsuario = document.getElementById('btnUsuario');
+        const submenu = document.getElementById('submenuUsuario');
+
+        btnUsuario.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if(!btnUsuario.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>

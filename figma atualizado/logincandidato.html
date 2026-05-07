@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Entrar</title>
+    <link rel="stylesheet" href="logincandidato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="vagas.html">Vagas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="botoesnavbar">
+                <a href="logincandidato.html" class="btn btnbranco ativo">Sou candidato</a>
+                <a href="loginempresa.html" class="btn btnlaranja">Sou empresa</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Login -->
+    <section class="secaologin">
+        <div class="formulariologin">
+            <div class="cabecalhoform">
+                <i class="fas fa-user"></i>
+                <h2>Entrar</h2>
+            </div>
+
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="campo-input">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nome de usuário ou email">
+            </div>
+
+            <div class="campo-input">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="senha" placeholder="Senha">
+                <i class="fas fa-eye" id="olho-senha"></i>
+            </div>
+
+            <div class="opcoes">
+                <label class="checkbox-container">
+                    <input type="checkbox">
+                    <span>Lembre-me</span>
+                </label>
+                <a href="#" class="link-esqueci">Esqueci minha senha</a>
+            </div>
+
+            <!-- LINK PARA HOME CANDIDATO -->
+            <a href="homecandidato.html" class="btn btnlaranja btn-entrar">Entrar</a>
+
+            <p class="link-registro">Não tem uma conta? <a href="cadastrocandidato.html">Registrar-se</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const inputSenha = document.getElementById('senha');
+        const olhoSenha = document.getElementById('olho-senha');
+
+        olhoSenha.addEventListener('click', function() {
+            if (inputSenha.type === 'password') {
+                inputSenha.type = 'text';
+                olhoSenha.classList.remove('fa-eye');
+                olhoSenha.classList.add('fa-eye-slash');
+            } else {
+                inputSenha.type = 'password';
+                olhoSenha.classList.remove('fa-eye-slash');
+                olhoSenha.classList.add('fa-eye');
+            }
+        });
+    </script>
+
+</body>
+</html>

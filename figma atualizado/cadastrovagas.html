@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Emprega - Cadastrar Vaga</title>
+    <link rel="stylesheet" href="cadastrovagas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR DA EMPRESA -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Vale Emprega">
+            </div>
+            
+            <ul class="menu">
+                <li><a href="homeempresa.html">Início</a></li>
+                <li><a href="buscarprofissionais.html">Candidatos</a></li>
+                <li><a href="cadastrovaga.html" class="ativo">Cadastrar vaga</a></li>
+            </ul>
+
+            <div class="area-usuario">
+                <a href="#" class="nome-usuario" id="btnUsuario">
+                    <i class="fas fa-building"></i> Nome da Empresa <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="submenu" id="submenuUsuario">
+                    <li><a href="sobreempresa.html"><i class="fas fa-info-circle"></i> Sobre a Plataforma</a></li>
+                    <li><a href="contatoempresa.html"><i class="fas fa-question-circle"></i> Contato</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    <li><a href="perfilempresa.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <section class="secaocadastrovaga">
+        <div class="container">
+            <div class="cabecalho">
+                <a href="#" class="btnvoltar">Voltar</a>
+                <h1>Cadastrar nova vaga</h1>
+                <div class="botoesacao">
+                    <button class="btncancelar">Cancelar</button>
+                    <button class="btnpublicar">Publicar vaga</button>
+                </div>
+            </div>
+
+            <div class="conteudovaga">
+                <!-- LADO ESQUERDO: DETALHES E REQUISITOS -->
+                <div class="colunaesquerda">
+                    <div class="bloco">
+                        <h2>Detalhes da vaga *</h2>
+                        
+                        <div class="grupo-campos">
+                            <label>Título da vaga</label>
+                            <input type="text" placeholder="Ex: engenheiro de produção">
+                        </div>
+
+                        <div class="linhadupla">
+                            <div class="grupo-campos">
+                                <label>Nível de experiência</label>
+                                <select>
+                                    <option>Júnior</option>
+                                    <option selected>Pleno</option>
+                                    <option>Sênior</option>
+                                </select>
+                            </div>
+                            <div class="grupo-campos">
+                                <label>Tipo de contrato</label>
+                                <select>
+                                    <option selected>Efetivo (CLT)</option>
+                                    <option>Estágio</option>
+                                    <option>Freelancer</option>
+                                    <option>Temporário</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="linhadupla">
+                            <div class="grupo-campos">
+                                <label>Modelo de trabalho</label>
+                                <select>
+                                    <option selected>Presencial</option>
+                                    <option>Home Office</option>
+                                    <option>Híbrido</option>
+                                </select>
+                            </div>
+                            <div class="grupo-campos">
+                                <label>Faixa salarial</label>
+                                <div class="salario">
+                                    <input type="text" value="R$ 4.500">
+                                    <input type="text" value="R$ 6.000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grupo-campos">
+                            <label>Descrição da vaga</label>
+                            <textarea placeholder="Descreva as responsabilidades, requisitos e benefícios da vaga"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <h2>Requisitos da vaga</h2>
+                        
+                        <div class="grupo-campos">
+                            <label>Habilidades</label>
+                            <div class="tags">
+                                <button class="btnadicionar">+ Adicionar</button>
+                            </div>
+                        </div>
+
+                        <div class="grupo-campos">
+                            <label>Idiomas</label>
+                            <input type="text" placeholder="Inglês, Espanhol...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LADO DIREITO: INFORMAÇÕES DA EMPRESA E BENEFÍCIOS -->
+                <div class="colunadireita">
+                    <div class="bloco">
+                        <h2>Informações da empresa</h2>
+                        
+                        <div class="grupo-campos">
+                            <label>Nome da empresa</label>
+                            <input type="text" placeholder="Ex: Viapol">
+                        </div>
+
+                        <div class="grupo-campos">
+                            <label>Localização</label>
+                            <select>
+                                <option>Caçapava</option>
+                                <option>São Paulo</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Belo Horizonte</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-campos">
+                            <label>Imagem da empresa</label>
+                            <div class="upload">
+                                <div class="preview">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <button class="btninserir">Inserir imagem</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloco">
+                        <h2>Benefícios oferecidos</h2>
+                        
+                        <div class="checklist">
+                            <label>
+                                <input type="checkbox">
+                                <span>Vale refeição</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>Vale transporte</span>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>Plano de saúde</span>
+                            </label>
+                        </div>
+
+                        <button class="btnadicionarbeneficio">+ Adicionar benefício</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="conteudofooter">
+                <img src="img/logoazul.png" alt="Logo Vale Emprega" class="logofooter">
+                <p>Assessoria Empresarial LTDA | CNPJ: 12.345.678/0001-99 | Av. das Oportunidades, 1234, São Paulo/SP</p>
+                <a href="#" class="linkprivacidade">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btnUsuario = document.getElementById('btnUsuario');
+        const submenu = document.getElementById('submenuUsuario');
+
+        btnUsuario.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if(!btnUsuario.contains(e.target) && !submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
